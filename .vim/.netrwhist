@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/solomon/Projects/AsDiet/web/venv/lib/python2.7/site-packages'
+let g:netrw_dirhist_2='/Users/solomon/Projects/OpenSource/django-find-social-friends/sample/findfriends/findfriends'
+let g:netrw_dirhist_3='/Users/solomon/Projects/OpenSource/django-youtube/django_youtube'
+let g:netrw_dirhist_4='/Users/solomon/Projects/InanlarInsaat/src/Inanlar Insaat/Inanlar Insaat/Inanlar Insaat.xcodeproj'
