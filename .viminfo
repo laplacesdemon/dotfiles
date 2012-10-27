@@ -18,8 +18,9 @@ $
 
 # Command Line History (newest to oldest):
 :q
-:undolist
 :w
+:wq
+:undolist
 :sp simple_pages/resources.py
 :vs simple_pages/models.py
 :sp inanlar/settings.py
@@ -27,7 +28,6 @@ $
 :vs simple_pages/resources.py
 :e inanlar/settings.py
 :sp inanlar/templa:
-:wq
 :e
 :vs simple_pages/admin.py
 :vs simple_pages/templates/simple_pages/admin/change_form.html
@@ -67,55 +67,80 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-""0	LINE	0
-	    order = models.IntegerField()
-"1	LINE	0
+"0	LINE	0
+	" ================ Turn Off Swap Files ==============
+""1	LINE	0
 	
 "2	LINE	0
-	    order = models.IntegerField()
+	V" set scrolloff=8         "Start scrolling when we're 8 lines away from
+	" margins
+	" set sidescrolloff=15
+	" set sidescroll=1
+	
 "3	LINE	0
-	wefwefwef
-	    <script>
-	        alert("yeah");
-	    </script>
-	
+	dd"
 "4	LINE	0
-	wefwefwef
-	
+	" set wildmode=list:longest
+	" set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
+	" set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+	" set wildignore+=*vim/backups*
+	" set wildignore+=*sass-cache*
+	" set wildignore+=*DS_Store*
+	" set wildignore+=vendor/rails/**
+	" set wildignore+=vendor/cache/**
+	" set wildignore+=*.gem
+	" set wildignore+=log/**
+	" set wildignore+=tmp/**
+	" set wildignore+=*.png,*.jpg,*.gif
+	"
+	" "
 "5	LINE	0
-	    <script>
-	        alert("yeah");
-	    </script>
+	ddfiletype plugin indent on
 "6	LINE	0
-	    send_to_email = models.EmailField(max_length=75, blank=True)
+	Vset tabstop=4                   " a tab is 4 spaces
+	set expandtab                   " convert tabs to spaces
+	set softtabstop=4
+	set shiftwidth=4
 "7	LINE	0
-	            res.append(image_url)
+	" ================ Turn Off Swap Files ==============
 "8	LINE	0
-	        import pdb
-	        pdb.set_trace()
-	        return "ali"
+	" ================ Turn Off Swap Files ==============
 "9	LINE	0
-	            if pic.thumb:
+	"set guifont=Envy\ Code\ R:h14
 "e	CHAR	0
 	wew
 "-	CHAR	0
 	FIELDNAME
 
 # File marks:
-'0  16  0  ~/.vimrc
-'1  396  50  ~/Projects/InanlarInsaat/src/Inanlar Insaat/Inanlar Insaat/Inanlar Insaat.xcodeproj/project.pbxproj
-'2  10  0  ~/Projects/InanlarInsaat/src/Inanlar Insaat/Inanlar Insaat/Inanlar Insaat.xcodeproj
-'3  21  0  ~/Projects/Zuqqa/src/zuqqa/zuqqa_profile/views.py
-'4  80  33  ~/Projects/InanlarInsaat/src/web/inanlar/simple_pages/resources.py
-'5  80  20  ~/Projects/InanlarInsaat/src/web/inanlar/inanlar/settings.py
-'6  19  12  ~/Projects/InanlarInsaat/src/web/inanlar/simple_pages/resources.py
-'7  107  4  ~/Projects/InanlarInsaat/src/web/inanlar/simple_pages/models.py
-'8  53  6  ~/DEV/PHP/fethiye/index.html
-'9  11  47  ~/Projects/InanlarInsaat/src/web/inanlar/simple_pages/urls.py
+'0  4  0  ~/README.md
+'1  83  15  ~/.vimrc
+'2  35  0  ~/.vimrc
+'3  500  0  ~/.bash_history
+'4  47  0  ~/.bash_profile
+'5  55  0  ~/.vimrc
+'6  396  50  ~/Projects/InanlarInsaat/src/Inanlar Insaat/Inanlar Insaat/Inanlar Insaat.xcodeproj/project.pbxproj
+'7  10  0  ~/Projects/InanlarInsaat/src/Inanlar Insaat/Inanlar Insaat/Inanlar Insaat.xcodeproj
+'8  21  0  ~/Projects/Zuqqa/src/zuqqa/zuqqa_profile/views.py
+'9  80  33  ~/Projects/InanlarInsaat/src/web/inanlar/simple_pages/resources.py
 
 # Jumplist (newest first):
--'  16  0  ~/.vimrc
+-'  4  0  ~/README.md
+-'  1  0  ~/README.md
+-'  83  15  ~/.vimrc
 -'  1  0  ~/.vimrc
+-'  35  0  ~/.vimrc
+-'  16  43  ~/.vimrc
+-'  97  0  ~/.vimrc
+-'  89  0  ~/.vimrc
+-'  14  64  ~/.vimrc
+-'  13  10  ~/.vimrc
+-'  500  0  ~/.bash_history
+-'  1  0  ~/.bash_history
+-'  47  0  ~/.bash_profile
+-'  28  0  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  55  0  ~/.vimrc
 -'  396  50  ~/Projects/InanlarInsaat/src/Inanlar Insaat/Inanlar Insaat/Inanlar Insaat.xcodeproj/project.pbxproj
 -'  61  0  ~/Projects/InanlarInsaat/src/Inanlar Insaat/Inanlar Insaat/Inanlar Insaat.xcodeproj/project.pbxproj
 -'  1  0  ~/Projects/InanlarInsaat/src/Inanlar Insaat/Inanlar Insaat/Inanlar Insaat.xcodeproj/project.pbxproj
@@ -195,87 +220,165 @@ $
 -'  13  15  ~/Projects/InanlarInsaat/src/web/inanlar/fabfile.py
 -'  5  49  ~/Projects/InanlarInsaat/src/web/inanlar/inanlar/views.py
 -'  60  58  ~/Projects/InanlarInsaat/src/web/inanlar/fabfile.py
--'  45  3  ~/Projects/InanlarInsaat/src/web/inanlar/fabfile.py
--'  61  0  ~/Projects/InanlarInsaat/src/web/inanlar/fabfile.py
--'  26  0  /usr/local/etc/redis.conf
--'  1  0  /usr/local/etc/redis.conf
--'  5  25  ~/.bash_profile
--'  10  0  ~/.bash_profile
--'  1  0  ~/.bash_profile
--'  66  0  ~/Dropbox/TouchMania/src/server/2.0/touchmania/social_game/views.py
--'  9  16  ~/Dropbox/TouchMania/src/server/2.0/touchmania/social_game/urls.py
--'  201  38  ~/Dropbox/TouchMania/src/server/2.0/touchmania/social_game/views.py
--'  15  0  ~/Dropbox/TouchMania/src/server/2.0/touchmania/touchmania/settings.py
--'  1  0  ~/Dropbox/TouchMania/src/server/2.0/touchmania/touchmania/settings.py
--'  30  34  ~/Projects/InanlarInsaat/src/web/inanlar/simple_pages/urls.py
--'  37  8  ~/Projects/InanlarInsaat/src/web/inanlar/simple_pages/views.py
--'  26  7  ~/Projects/InanlarInsaat/src/web/inanlar/simple_pages/views.py
--'  2  133  ~/Projects/InanlarInsaat/src/web/inanlar/simple_pages/resources.py
--'  1  0  ~/Projects/InanlarInsaat/src/web/inanlar/simple_pages/resources.py
--'  5  0  ~/Dropbox/TouchMania/src/server/2.0/touchmania/social_game/views.py
+-'  83  15  ~/.vimrc
+-'  1  0  ~/.vimrc
+-'  35  0  ~/.vimrc
+-'  16  43  ~/.vimrc
 
 # History of marks within files (newest to oldest):
 
+> ~/README.md
+	"	4	0
+
 > ~/.vimrc
-	"	16	0
-	^	16	1
-	.	16	0
-	+	42	56
-	+	8	9
+	"	83	15
+	^	90	16
+	.	90	15
+	+	58	0
+	+	9	0
+	+	21	0
+	+	41	10
+	+	45	11
+	+	44	41
+	+	45	43
+	+	56	0
+	+	58	0
+	+	52	0
+	+	55	0
+	+	21	64
+	+	21	0
+	+	21	0
+	+	14	0
+	+	21	0
+	+	14	54
+	+	20	64
+	+	14	0
+	+	18	0
+	+	14	0
+	+	5	24
+	+	1	33
+	+	7	28
+	+	10	17
+	+	12	31
+	+	12	32
+	+	12	32
+	+	43	22
+	+	55	0
+	+	46	0
+	+	51	9
+	+	49	0
+	+	49	14
+	+	51	0
+	+	48	0
+	+	41	0
+	+	43	0
+	+	41	38
 	+	42	0
-	+	42	21
-	+	18	14
+	+	41	2
+	+	10	0
+	+	11	0
 	+	1	0
 	+	2	0
-	+	1	0
-	+	42	0
-	+	42	19
-	+	42	0
-	+	20	0
-	+	21	0
-	+	42	0
-	+	42	83
-	+	42	0
-	+	42	0
-	+	22	35
-	+	18	25
-	+	25	56
-	+	26	28
-	+	18	18
-	+	20	20
-	+	20	0
-	+	20	0
-	+	18	0
-	+	20	12
-	+	27	0
-	+	33	17
-	+	35	9
-	+	36	10
-	+	18	0
-	+	9	11
-	+	20	0
-	+	19	11
-	+	4	12
-	+	5	43
-	+	4	38
-	+	13	42
-	+	36	11
-	+	41	31
 	+	10	0
-	+	27	18
-	+	29	3
-	+	28	28
-	+	29	0
+	+	1	39
+	+	2	0
 	+	3	0
-	+	10	0
-	+	11	10
-	+	14	11
-	+	13	41
-	+	14	43
+	+	56	0
+	+	55	0
+	+	53	0
+	+	54	0
+	+	53	45
+	+	20	45
 	+	22	0
+	+	40	0
+	+	40	0
+	+	39	50
+	+	23	0
+	+	24	0
+	+	25	0
+	+	26	0
+	+	27	0
+	+	28	0
+	+	27	15
+	+	28	16
 	+	29	0
-	+	15	0
-	+	16	0
+	+	30	0
+	+	31	0
+	+	32	0
+	+	12	0
+	+	33	0
+	+	55	0
+	+	34	0
+	+	35	0
+	+	35	43
+	+	35	79
+	+	35	79
+	+	39	0
+	+	42	0
+	+	93	0
+	+	93	17
+	+	68	0
+	+	69	0
+	+	70	0
+	+	71	0
+	+	72	0
+	+	73	0
+	+	74	0
+	+	88	0
+	+	86	33
+	+	87	0
+	+	88	0
+	+	89	0
+	+	93	0
+	+	93	15
+	+	39	0
+	+	38	0
+	+	90	15
+
+> ~/.bash_history
+	"	500	0
+
+> ~/.bash_profile
+	"	47	0
+	.	39	0
+	+	2	12
+	+	37	21
+	+	39	42
+	+	38	56
+	+	37	21
+	+	38	25
+	+	41	22
+	+	44	75
+	+	36	0
+	+	2	63
+	+	46	21
+	+	47	37
+	+	35	0
+	+	32	77
+	+	34	5
+	+	32	0
+	+	34	64
+	+	33	10
+	+	4	0
+	+	9	0
+	+	15	16
+	+	16	15
+	+	8	2
+	+	28	3
+	+	18	0
+	+	17	0
+	+	28	0
+	+	27	0
+	+	11	0
+	+	27	0
+	+	27	0
+	+	27	0
+	+	28	0
+	+	29	0
+	+	27	0
+	+	32	0
+	+	36	0
+	+	39	0
 
 > ~/Projects/InanlarInsaat/src/Inanlar Insaat/Inanlar Insaat/Inanlar Insaat.xcodeproj/project.pbxproj
 	"	396	50
@@ -1280,29 +1383,6 @@ $
 > /usr/local/etc/redis.conf
 	"	26	0
 
-> ~/.bash_profile
-	"	5	25
-	^	42	15
-	.	42	10
-	+	2	12
-	+	57	21
-	+	61	42
-	+	58	56
-	+	57	21
-	+	58	25
-	+	64	22
-	+	67	75
-	+	53	0
-	+	2	63
-	+	69	21
-	+	70	37
-	+	44	0
-	+	41	77
-	+	43	5
-	+	38	0
-	+	43	64
-	+	42	10
-
 > ~/Dropbox/TouchMania/src/server/2.0/touchmania/social_game/urls.py
 	"	9	16
 	^	8	17
@@ -2211,9 +2291,3 @@ $
 	+	3	0
 	+	2	0
 	+	1	0
-
-> ~/Projects/Zuqqa/src/zuqqa/zuqqa_profile/tags
-	"	1	0
-
-> /usr/share/vim/vim73/doc/repeat.txt
-	"	31	56
