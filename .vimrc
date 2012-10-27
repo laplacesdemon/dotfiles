@@ -1,6 +1,7 @@
 " ================ Pathogen Settings =============
 " load all the plugins in ~/.vim/bundle
-"
+
+filetype off
 call pathogen#infect()
 call pathogen#helptags()
 
@@ -18,6 +19,10 @@ set showmode                    "Show current mode down the bottom
 "set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
+
+" ================ Font Settings  ===================
+
+set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline:h14
 
 " ================ Indentation ======================
 
