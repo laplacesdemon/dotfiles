@@ -8,6 +8,7 @@ call pathogen#helptags()
 " turn syntax highlighting on
 syntax on
 
+
 " ================ general settings ===============
 
 set number
@@ -20,9 +21,11 @@ set showmode                    "Show current mode down the bottom
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 
+
 " ================ Font Settings  ===================
 
 set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline:h14
+
 
 " ================ Indentation ======================
 
@@ -43,17 +46,21 @@ filetype indent on
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
 
+
 " ================ Searching Settings ===============
 
 set incsearch       " Find the next match as we type the search
 "set showmatch       " show matching brace
 set hlsearch        " highlight the results
+set smartcase       " case insensitive search
+
 
 " ================ Turn Off Swap Files ==============
 
 set noswapfile
 set nobackup
 set nowb
+
 
 " ================ Color Scheme Settings  ===========
 
@@ -68,12 +75,22 @@ let g:molokai_original = 1 " a customization for the molokai scheme
 " 256-grayvim
 " mrkn256
 " wombat256
+" solomon
+
+
+" ================ Mappings  ========================
+nmap <Tab> <C-w><C-w> 
+nmap <S-Tab> :tabnext<CR>
+nmap <C-t> :tabnew<cr>
+imap <C-t> <ESC>:tabnew<cr> 
+
 
 " ================ Folds ============================
 
 set foldmethod=indent   "fold based on indent
-set foldnestmax=3       "deepest fold is 3 levels
+set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
+set foldlevel=1         "i don't know this actually
 
 " ================ Completion =======================
 
@@ -90,6 +107,7 @@ set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 
+
 " ================ Scrolling ========================
 
 set scrolloff=10         "Start scrolling when we're x lines away from margins
@@ -100,3 +118,68 @@ set sidescroll=1
 " set termencoding=utf-8
 " set encoding=utf-8
 " set fileencodings=utf-8,cp1251
+
+
+" ================ Python-Mode Settings  =============
+"
+" Auto open cwindow if errors be finded
+let g:pymode_lint_cwindow = 1
+        
+
+" Switch pylint, pyflakes, pep8, mccabe code-checkers
+" Can have multiply values pep8,pyflakes,mcccabe 
+let g:pymode_lint_checker = "pyflakes,mccabe"
+
+" Skip errors and warnings
+" E.g. E501,W002, E2,W (Skip all Warnings and Errors startswith E2) and etc
+" let g:pymode_lint_ignore = "E501"
+
+" Select errors and warnings
+" E.g. E4,W
+" let g:pymode_lint_select = ""
+
+" Run linter on the fly
+" let g:pymode_lint_onfly = 0
+
+" Pylint configuration file
+" If file not found use 'pylintrc' from python-mode plugin directory
+" let g:pymode_lint_config = "$HOME/.pylintrc"
+
+" Check code every save
+" let g:pymode_lint_write = 1
+
+" Show error message if cursor placed at the error line
+" let g:pymode_lint_message = 1
+
+" Place error signs
+" let g:pymode_lint_signs = 1
+
+" Maximum allowed mccabe complexity
+" let g:pymode_lint_mccabe_complexity = 8
+
+" Minimal height of pylint error window
+" let g:pymode_lint_minheight = 3
+
+" Maximal height of pylint error window
+" let g:pymode_lint_maxheight = 6
+
+nmap <Leader>q <F5>
+
+" ================ Python-Mode Settings  =============
+"
+autocmd FileType python set ft=python.django " For SnipMate
+autocmd FileType html set ft=htmldjango.html " For SnipMate
+
+
+" ================ NERDTree Settings  ================
+
+" To close window when there is only NERDTree left
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Uncomment if you want NERDTree to open automatically when you open vim (with
+" a file
+"autocmd vimenter * NERDTree
+
+" Mapping for easy access to NERDTree
+nmap <C-n> :NERDTreeToggle<CR>
+nmap <Leader>n :NERDTreeToggle<CR>
