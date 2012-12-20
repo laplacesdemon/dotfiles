@@ -30,7 +30,7 @@ alias www="cd /Users/solomon/DEV/PHP/"
 
 # ssh shortcuts
 alias sshTimete="ssh -i /Users/solomon/Projects/Timete/Management/credentials/solomon_rsa solomon@ec2-46-51-130-107.eu-west-1.compute.amazonaws.com"
-alias ssh_timete="ssh -i /Users/solomon/Projects/Timete/Management/credentials/solomon_rsa solomon@ec2-46-51-130-107.eu-west-1.compute.amazonaws.com"
+alias ssh_timete="ssh -i /Users/solomon/Projects/Timete/Management/credentials/amazon.pem solomon@ec2-46-51-130-107.eu-west-1.compute.amazonaws.com"
 export TIMETE="ec2-46-51-130-107.eu-west-1.compute.amazonaws.com"
 
 # python related

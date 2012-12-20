@@ -83,12 +83,23 @@ nmap <Tab> <C-w><C-w>
 nmap <S-Tab> :tabnext<CR>
 nmap <C-t> :tabnew<cr>
 imap <C-t> <ESC>:tabnew<cr> 
+nmap 1 $
 
+" mapping each tab [0-9] to numbers
+map <leader>1 :tabnext 1<CR>
+map <leader>2 :tabnext 2<CR>
+map <leader>3 :tabnext 3<CR>
+map <leader>4 :tabnext 4<CR>
+map <leader>5 :tabnext 5<CR>
+map <leader>6 :tabnext 6<CR>
+map <leader>7 :tabnext 7<CR>
+map <leader>8 :tabnext 8<CR>
+map <leader>9 :tabnext 9<CR>
 
 " ================ Folds ============================
 
-set foldmethod=indent   "fold based on indent
-set foldnestmax=10      "deepest fold is 10 levels
+"set foldmethod=indent   "fold based on indent
+set foldnestmax=0      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1         "i don't know this actually
 
@@ -128,7 +139,7 @@ let g:pymode_lint_cwindow = 1
 
 " Switch pylint, pyflakes, pep8, mccabe code-checkers
 " Can have multiply values pep8,pyflakes,mcccabe 
-let g:pymode_lint_checker = "pyflakes,mccabe"
+let g:pymode_lint_checker = "pyflakes,pep8,mccabe"
 
 " Skip errors and warnings
 " E.g. E501,W002, E2,W (Skip all Warnings and Errors startswith E2) and etc
@@ -175,6 +186,7 @@ autocmd FileType html set ft=htmldjango.html " For SnipMate
 
 " To close window when there is only NERDTree left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let NERDTreeIgnore = ['\.pyc$']
 
 " Uncomment if you want NERDTree to open automatically when you open vim (with
 " a file
