@@ -1,7 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/solomon/Projects/AsDiet/web/venv/lib/python2.7/site-packages'
 let g:netrw_dirhist_2='/Users/solomon/Projects/OpenSource/django-find-social-friends/sample/findfriends/findfriends'
 let g:netrw_dirhist_3='/Users/solomon/Projects/OpenSource/django-youtube/django_youtube'
 let g:netrw_dirhist_4='/Users/solomon/Projects/InanlarInsaat/src/Inanlar Insaat/Inanlar Insaat/Inanlar Insaat.xcodeproj'
 let g:netrw_dirhist_5='/Users/solomon/Projects/InanlarInsaat/src/web/inanlar/.ropeproject'
+let g:netrw_dirhist_6='/Users/solomon/.dotfiles/.vim/bundle/.deleted'
+let g:netrw_dirhist_7='/Users/solomon/Projects/Zuqqa/src/zuqqa/find_friends_twitter'
