@@ -84,6 +84,7 @@ nmap <S-Tab> :tabnext<CR>
 nmap <C-t> :tabnew<cr>
 imap <C-t> <ESC>:tabnew<cr> 
 nmap 1 $
+nmap <leader>' :TagbarToggle<CR>
 
 " mapping each tab [0-9] to numbers
 map <leader>1 :tabnext 1<CR>
