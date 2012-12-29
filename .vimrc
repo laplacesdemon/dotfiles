@@ -97,6 +97,12 @@ map <leader>7 :tabnext 7<CR>
 map <leader>8 :tabnext 8<CR>
 map <leader>9 :tabnext 9<CR>
 
+" mapping for Rope, see :help RopeKeys
+":map <C-c>d :call RopeGotoDefinition()
+
+" other shortcuts
+nmap <Leader>q <F5>
+
 " ================ Folds ============================
 
 "set foldmethod=indent   "fold based on indent
@@ -133,7 +139,9 @@ set sidescroll=1
 
 
 " ================ Python-Mode Settings  =============
+" copied from: https://github.com/klen/python-mode
 "
+
 " Auto open cwindow if errors be finded
 let g:pymode_lint_cwindow = 1
         
@@ -175,13 +183,77 @@ let g:pymode_lint_checker = "pyflakes,pep8,mccabe"
 " Maximal height of pylint error window
 " let g:pymode_lint_maxheight = 6
 
-nmap <Leader>q <F5>
-
-" ================ Python-Mode Settings  =============
-"
 autocmd FileType python set ft=python.django " For SnipMate
 autocmd FileType html set ft=htmldjango.html " For SnipMate
 
+" Enable python folding
+let g:pymode_folding = 1
+
+" Enable python objects and motion
+let g:pymode_motion = 1
+
+" Auto fix vim python paths if virtualenv enabled
+let g:pymode_virtualenv = 1
+
+" Additional python paths
+" let g:pymode_paths = []
+
+" " Load breakpoints plugin
+let g:pymode_breakpoint = 1
+
+" " Key for set/unset breakpoint
+let g:pymode_breakpoint_key = '<leader>b'
+
+" " Autoremove unused whitespaces
+let g:pymode_utils_whitespaces = 1
+
+" " Enable pymode indentation
+let g:pymode_indent = 1
+
+" " Set default pymode python options
+" let g:pymode_options = 1
+
+" ================ Python-Mode Settings  =============
+" Syntax Highlightinh
+
+" Enable pymode's custom syntax highlighting
+let g:pymode_syntax = 1
+
+" " Enable all python highlightings
+let g:pymode_syntax_all = 1
+
+" " Highlight "print" as function
+" let g:pymode_syntax_print_as_function = 0
+
+" " Highlight indentation errors
+" let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+
+" " Highlight trailing spaces
+" let g:pymode_syntax_space_errors = g:pymode_syntax_all
+
+" " Highlight string formatting
+" let g:pymode_syntax_string_formatting = g:pymode_syntax_all
+
+" " Highlight str.format syntax
+" let g:pymode_syntax_string_format = g:pymode_syntax_all
+
+" " Highlight string.Template syntax
+" let g:pymode_syntax_string_templates = g:pymode_syntax_all
+
+" " Highlight doc-tests
+" let g:pymode_syntax_doctests = g:pymode_syntax_all
+
+" " Highlight builtin objects (__doc__, self, etc)
+" let g:pymode_syntax_builtin_objs = g:pymode_syntax_all
+
+" " Highlight builtin functions
+" let g:pymode_syntax_builtin_funcs = g:pymode_syntax_all
+
+" " Highlight exceptions
+" let g:pymode_syntax_highlight_exceptions = g:pymode_syntax_all
+
+" " For fast machines
+" let g:pymode_syntax_slow_sync = 0
 
 " ================ NERDTree Settings  ================
 
