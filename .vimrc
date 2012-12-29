@@ -268,3 +268,11 @@ let NERDTreeIgnore = ['\.pyc$']
 " Mapping for easy access to NERDTree
 nmap <C-n> :NERDTreeToggle<CR>
 nmap <Leader>n :NERDTreeToggle<CR>
+
+" ================ Omni-Completion Settings  ================
+"
+" If you prefer the Omni-Completion tip window to close when a selection is
+" made, these lines close it on movement in insert mode or when leaving
+" insert mode
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
