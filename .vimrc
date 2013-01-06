@@ -65,8 +65,11 @@ set nowb
 " ================ Color Scheme Settings  ===========
 
 set t_Co=256
+set background=dark  
+"colorscheme solarized
 colorscheme molokai
 let g:molokai_original = 1 " a customization for the molokai scheme
+let g:solarized_termcolors=256
 
 " My favorite colorschemes are
 " desert256
@@ -76,6 +79,7 @@ let g:molokai_original = 1 " a customization for the molokai scheme
 " mrkn256
 " wombat256
 " solomon
+" solarized
 
 
 " ================ Mappings  ========================
