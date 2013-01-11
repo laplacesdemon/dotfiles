@@ -132,7 +132,7 @@ set wildignore+=*.png,*.jpg,*.gif
 
 " ================ Scrolling ========================
 
-set scrolloff=10         "Start scrolling when we're x lines away from margins
+set scrolloff=20         "Start scrolling when we're x lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
