@@ -88,3 +88,21 @@ export LANG=en_US.UTF-8
 
 # directory shortcuts
 export MUSIC_DIR="Music/iTunes/Music/"
+
+#################################################
+# Change theme of terminal when sshing
+# see: https://coderwall.com/p/-9gz5q 
+#################################################
+
+# Change theme of Terminal.app
+tabc() {
+    NAME="${1:-IR_Black}"
+    osascript -e "tell application \"Terminal\" to set current settings of front window to settings set \"$NAME\""
+}
+
+# Change to Danger theme when executing ssh
+ssh() {
+    tabc Danger
+    /usr/bin/ssh "$*"
+    tabc
+}
