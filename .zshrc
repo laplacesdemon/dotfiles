@@ -72,6 +72,7 @@ alias nginx_status="ps ax | grep nginx"
 alias ll="ls -alh"
 alias l="ls -alh"
 alias la="ls -alh"
+alias cat="pygmentize -O style=monokai -f console256 -g"
 
 # alias to frequent places
 alias www="cd /Users/solomon/DEV/PHP/"
