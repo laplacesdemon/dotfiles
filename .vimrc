@@ -13,14 +13,18 @@ syntax on
 
 set number
 set mouse=a
+set mousehide
 "set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=1000                "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
 set showmode                    "Show current mode down the bottom
-"set gcr=a:blinkon0              "Disable cursor blink
+set gcr=a:blinkon1              "cursor blinking settings
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 
+" ================ Trivial Settings  ===================
+set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+set cursorline
 
 " ================ Font Settings  ===================
 
@@ -52,7 +56,8 @@ set linebreak    "Wrap lines at convenient points
 set incsearch       " Find the next match as we type the search
 "set showmatch       " show matching brace
 set hlsearch        " highlight the results
-set smartcase       " case insensitive search
+"set smartcase       " case insensitive search
+set ignorecase
 
 
 " ================ Turn Off Swap Files ==============
@@ -82,13 +87,23 @@ let g:solarized_termcolors=256
 " solarized
 
 
-" ================ Mappings  ========================
+" ================ Mappings / Shortcuts  ========================
 nmap <Tab> <C-w><C-w> 
 nmap <S-Tab> :tabnext<CR>
 nmap <C-t> :tabnew<cr>
 imap <C-t> <ESC>:tabnew<cr> 
 nmap 1 $
 nmap <leader>' :TagbarToggle<CR>
+
+" switching tabs with CTRL+<movements>
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+map <c-j> <c-w><Down>
+map <c-k> <c-w><Up>
+map <c-l> <c-w><Right>
+map <c-h> <c-w><Left>
 
 " mapping each tab [0-9] to numbers
 map <leader>1 :tabnext 1<CR>
@@ -103,16 +118,18 @@ map <leader>9 :tabnext 9<CR>
 
 " mapping for Rope, see :help RopeKeys
 ":map <C-c>d :call RopeGotoDefinition()
+map <leader>j :RopeGotoDefinition<CR>
+map <leader>r :RopeRename<CR>
 
 " other shortcuts
 nmap <Leader>q <F5>
 
 " ================ Folds ============================
 
-"set foldmethod=indent   "fold based on indent
+set foldmethod=indent   "fold based on indent
 set foldnestmax=0      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
-set foldlevel=1         "i don't know this actually
+set foldlevel=99         "i don't know this actually
 
 " ================ Completion =======================
 
@@ -263,7 +280,14 @@ let g:pymode_syntax_all = 1
 
 " To close window when there is only NERDTree left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeShowBookmarks=1
+let NERDTreeChDirMode=0
+let NERDTreeQuitOnOpen=0
+let NERDTreeMouseMode=2
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.pyc','\~$','\.swo$','\.swp$','\.git','\.hg','\.svn','\.bzr']
+let NERDTreeKeepTreeInNewTab=1
+let g:nerdtree_tabs_open_on_gui_startup=0
 
 " Uncomment if you want NERDTree to open automatically when you open vim (with
 " a file
@@ -280,3 +304,16 @@ nmap <Leader>n :NERDTreeToggle<CR>
 " insert mode
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+" ================ Virtual Env Settings  ================
+" Add the virtualenv's site-packages to vim path
+py << EOF
+import os.path
+import sys
+import vim
+if 'VIRTUAL_ENV' in os.environ:
+    project_base_dir = os.environ['VIRTUAL_ENV']
+    sys.path.insert(0, project_base_dir)
+    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    execfile(activate_this, dict(__file__=activate_this))
+EOF
