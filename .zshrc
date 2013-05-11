@@ -39,7 +39,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx pip terminalapp vi-mode)
+plugins=(git osx terminalapp colored-man vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -80,6 +80,7 @@ alias www="cd /Users/solomon/DEV/PHP/"
 # python related
 alias django_path="cd /Library/Python/2.7/site-packages/django"
 alias python_packages="cd /Library/Python/2.7/site-packages"
+alias runserver="python manage.py runserver_plus"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -96,14 +97,14 @@ export MUSIC_DIR="Music/iTunes/Music/"
 #################################################
 
 # Change theme of Terminal.app
-tabc() {
-    NAME="${1:-IR_Black}"
-    osascript -e "tell application \"Terminal\" to set current settings of front window to settings set \"$NAME\""
-}
-
-# Change to Danger theme when executing ssh
-ssh() {
-    tabc Danger
-    /usr/bin/ssh "$*"
-    tabc
-}
+#tabc() {
+#    NAME="${1:-IR_Black}"
+#    osascript -e "tell application \"Terminal\" to set current settings of front window to settings set \"$NAME\""
+#}
+#
+## Change to Danger theme when executing ssh
+#ssh() {
+#    tabc Danger
+#    /usr/bin/ssh "$*"
+#    tabc
+#}
