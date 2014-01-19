@@ -21,6 +21,7 @@ set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon1              "cursor blinking settings
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
+set ruler "Always show current position
 
 " ================ Trivial Settings  ===================
 set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
@@ -71,7 +72,6 @@ set nowb
 
 set t_Co=256
 set background=dark  
-"colorscheme solarized
 colorscheme molokai
 let g:molokai_original = 1 " a customization for the molokai scheme
 let g:solarized_termcolors=256
@@ -133,7 +133,8 @@ set foldlevel=99         "i don't know this actually
 
 " ================ Completion =======================
 
-set wildmode=list:longest
+"set wildmode=list:longest
+set wildmode=longest:full
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 set wildignore+=*vim/backups*
