@@ -45,3 +45,4 @@ export LANG=en_US.UTF-8
 
 # directory shortcuts
 export MUSIC_DIR="Music/iTunes/Music/"
+export FLAGS_GETOPT_CMD="$(brew --prefix gnu-getopt)/bin/getopt"
