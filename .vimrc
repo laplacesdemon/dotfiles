@@ -72,7 +72,7 @@ set nowb
 
 set t_Co=256
 set background=dark  
-colorscheme molokai
+"colorscheme molokai
 let g:molokai_original = 1 " a customization for the molokai scheme
 let g:solarized_termcolors=256
 
