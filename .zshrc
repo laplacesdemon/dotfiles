@@ -7,7 +7,7 @@ DEFAULT_USER="smelikoglu"
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="solomon"
 
 # My fav themes are
 # robbyrussell
@@ -101,6 +101,7 @@ alias ll="ls -alh"
 alias l="ls -alh"
 alias la="ls -alh"
 alias catc="pygmentize -O style=monokai -f console256 -g"
+alias gs="git status -sb"
 
 # python related
 alias django_path="cd /Library/Python/2.7/site-packages/django"
