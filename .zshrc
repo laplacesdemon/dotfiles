@@ -17,10 +17,6 @@ ZSH_THEME="solomon"
 # agnoster
 # solomon
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -39,34 +35,32 @@ COMPLETION_WAITING_DOTS="true"
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
 
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+ENABLE_CORRECTION="false"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #plugins=(git osx terminalapp colored-man vi-mode)
-plugins=(git osx terminalapp)
+#plugins=(git git-extras osx terminalapp colored-man)
+#plugins=(git git-extras)
+plugins=()
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-#export PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres.app/Contents/MacOS/bin:$PATH
+export PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
+#export PATH=/usr/local/sbin:$PATH
 
 # copied from bash_profile
 #
@@ -109,6 +103,9 @@ alias python_packages="cd /Library/Python/2.7/site-packages"
 alias runserver="python manage.py runserver_plus"
 alias runserver192="python manage.py runserver_plus 192.168.0.12:8000"
 
+# servers
+alias ninja='84.22.101.230'
+
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
@@ -131,3 +128,10 @@ export LANG=en_US.UTF-8
 #}
 export FLAGS_GETOPT_CMD="$(brew --prefix gnu-getopt)/bin/getopt"
 export VIRTUALENV_DISTRIBUTE=true
+
+# add dates to history
+export HISTTIMEFORMAT="%d/%m/%y %T "
+
+alias gst="git status -uno"
+task list
+. "/Users/smelikoglu/siri-bash.profile"
