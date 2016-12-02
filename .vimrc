@@ -2,71 +2,71 @@
 " load all the plugins in ~/.vim/bundle
 
 filetype off
-"call pathogen#infect()
+call pathogen#infect()
 "call pathogen#helptags()
-execute pathogen#infect()
+"execute pathogen#infect()
 
 " turn syntax highlighting on
 syntax on
 
 
-" ================ general settings ===============
-
-set number
-set mouse=a
-set mousehide
-set backspace=indent,eol,start  "Allow backspace in insert mode
-set history=1000                "Store lots of :cmdline history
-set showcmd                     "Show incomplete cmds down the bottom
-set showmode                    "Show current mode down the bottom
-set gcr=a:blinkon1              "cursor blinking settings
-set visualbell                  "No sounds
-set autoread                    "Reload files changed outside vim
-set ruler 						"Always show current position
-
-" ================ Trivial Settings  ===================
-set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
-set cursorline
-
-" ================ Font Settings  ===================
-
-set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline:h14
-
-
-" ================ Indentation ======================
-
-set autoindent
-set smartindent
-set smarttab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
-set expandtab
-
-filetype plugin on
-filetype indent on
-
-" Display tabs and trailing spaces visually
-"set list listchars=tab:\ \ ,trail:·
-
-set nowrap       "Don't wrap lines
-set linebreak    "Wrap lines at convenient points
-
-
-" ================ Searching Settings ===============
-
-set incsearch       " Find the next match as we type the search
-"set showmatch       " show matching brace
-set hlsearch        " highlight the results
-"set smartcase       " case insensitive search
-set ignorecase
-
-
-" ================ Turn Off Swap Files ==============
-
-set noswapfile
-set nobackup
-set nowb
+"" ================ general settings ===============
+"
+"set number
+"set mouse=a
+"set mousehide
+"set backspace=indent,eol,start  "Allow backspace in insert mode
+"set history=1000                "Store lots of :cmdline history
+"set showcmd                     "Show incomplete cmds down the bottom
+"set showmode                    "Show current mode down the bottom
+"set gcr=a:blinkon1              "cursor blinking settings
+"set visualbell                  "No sounds
+"set autoread                    "Reload files changed outside vim
+"set ruler 						"Always show current position
+"
+"" ================ Trivial Settings  ===================
+"set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+"set cursorline
+"
+"" ================ Font Settings  ===================
+"
+"set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline:h14
+"
+"
+"" ================ Indentation ======================
+"
+"set autoindent
+"set smartindent
+"set smarttab
+"set shiftwidth=4
+"set softtabstop=4
+"set tabstop=4
+"set expandtab
+"
+"filetype plugin on
+"filetype indent on
+"
+"" Display tabs and trailing spaces visually
+""set list listchars=tab:\ \ ,trail:·
+"
+"set nowrap       "Don't wrap lines
+"set linebreak    "Wrap lines at convenient points
+"
+"
+"" ================ Searching Settings ===============
+"
+"set incsearch       " Find the next match as we type the search
+""set showmatch       " show matching brace
+"set hlsearch        " highlight the results
+""set smartcase       " case insensitive search
+"set ignorecase
+"
+"
+"" ================ Turn Off Swap Files ==============
+"
+"set noswapfile
+"set nobackup
+"set nowb
 
 
 " ================ Color Scheme Settings  ===========
@@ -281,23 +281,23 @@ let g:pymode_syntax_all = 1
 " ================ NERDTree Settings  ================
 
 " To close window when there is only NERDTree left
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-"let NERDTreeShowBookmarks=1
-"let NERDTreeChDirMode=0
-"let NERDTreeQuitOnOpen=0
-"let NERDTreeMouseMode=2
-"let NERDTreeShowHidden=1
-"let NERDTreeIgnore=['\.pyc','\~$','\.swo$','\.swp$','\.git','\.hg','\.svn','\.bzr','\.DS_Store','\.ropeproject']
-"let NERDTreeKeepTreeInNewTab=1
-"let g:nerdtree_tabs_open_on_gui_startup=0
-"
-"" Uncomment if you want NERDTree to open automatically when you open vim (with
-"" a file
-""autocmd vimenter * NERDTree
-"
-"" Mapping for easy access to NERDTree
-"nmap <C-n> :NERDTreeToggle<CR>
-"nmap <Leader>n :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let NERDTreeShowBookmarks=1
+let NERDTreeChDirMode=0
+let NERDTreeQuitOnOpen=0
+let NERDTreeMouseMode=2
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.pyc','\~$','\.swo$','\.swp$','\.git','\.hg','\.svn','\.bzr','\.DS_Store','\.ropeproject']
+let NERDTreeKeepTreeInNewTab=1
+let g:nerdtree_tabs_open_on_gui_startup=0
+
+" Uncomment if you want NERDTree to open automatically when you open vim (with
+" a file
+"autocmd vimenter * NERDTree
+
+" Mapping for easy access to NERDTree
+nmap <C-n> :NERDTreeToggle<CR>
+nmap <Leader>n :NERDTreeToggle<CR>
 
 " ================ Omni-Completion Settings  ================
 "
