@@ -2,8 +2,9 @@
 " load all the plugins in ~/.vim/bundle
 
 filetype off
-call pathogen#infect()
-call pathogen#helptags()
+"call pathogen#infect()
+"call pathogen#helptags()
+execute pathogen#infect()
 
 " turn syntax highlighting on
 syntax on
@@ -280,23 +281,23 @@ let g:pymode_syntax_all = 1
 " ================ NERDTree Settings  ================
 
 " To close window when there is only NERDTree left
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-let NERDTreeShowBookmarks=1
-let NERDTreeChDirMode=0
-let NERDTreeQuitOnOpen=0
-let NERDTreeMouseMode=2
-let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.pyc','\~$','\.swo$','\.swp$','\.git','\.hg','\.svn','\.bzr','\.DS_Store','\.ropeproject']
-let NERDTreeKeepTreeInNewTab=1
-let g:nerdtree_tabs_open_on_gui_startup=0
-
-" Uncomment if you want NERDTree to open automatically when you open vim (with
-" a file
-"autocmd vimenter * NERDTree
-
-" Mapping for easy access to NERDTree
-nmap <C-n> :NERDTreeToggle<CR>
-nmap <Leader>n :NERDTreeToggle<CR>
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"let NERDTreeShowBookmarks=1
+"let NERDTreeChDirMode=0
+"let NERDTreeQuitOnOpen=0
+"let NERDTreeMouseMode=2
+"let NERDTreeShowHidden=1
+"let NERDTreeIgnore=['\.pyc','\~$','\.swo$','\.swp$','\.git','\.hg','\.svn','\.bzr','\.DS_Store','\.ropeproject']
+"let NERDTreeKeepTreeInNewTab=1
+"let g:nerdtree_tabs_open_on_gui_startup=0
+"
+"" Uncomment if you want NERDTree to open automatically when you open vim (with
+"" a file
+""autocmd vimenter * NERDTree
+"
+"" Mapping for easy access to NERDTree
+"nmap <C-n> :NERDTreeToggle<CR>
+"nmap <Leader>n :NERDTreeToggle<CR>
 
 " ================ Omni-Completion Settings  ================
 "
