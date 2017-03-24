@@ -11,19 +11,19 @@ syntax on
 
 
 "" ================ general settings ===============
-"
-"set number
-"set mouse=a
-"set mousehide
-"set backspace=indent,eol,start  "Allow backspace in insert mode
-"set history=1000                "Store lots of :cmdline history
-"set showcmd                     "Show incomplete cmds down the bottom
-"set showmode                    "Show current mode down the bottom
-"set gcr=a:blinkon1              "cursor blinking settings
-"set visualbell                  "No sounds
-"set autoread                    "Reload files changed outside vim
-"set ruler 						"Always show current position
-"
+
+set number
+set mouse=a
+set mousehide
+set backspace=indent,eol,start  "Allow backspace in insert mode
+set history=1000                "Store lots of :cmdline history
+set showcmd                     "Show incomplete cmds down the bottom
+set showmode                    "Show current mode down the bottom
+set gcr=a:blinkon1              "cursor blinking settings
+set visualbell                  "No sounds
+set autoread                    "Reload files changed outside vim
+set ruler 						"Always show current position
+
 "" ================ Trivial Settings  ===================
 "set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 "set cursorline
@@ -34,39 +34,39 @@ syntax on
 "
 "
 "" ================ Indentation ======================
-"
-"set autoindent
-"set smartindent
-"set smarttab
-"set shiftwidth=4
-"set softtabstop=4
-"set tabstop=4
-"set expandtab
-"
-"filetype plugin on
-"filetype indent on
-"
-"" Display tabs and trailing spaces visually
-""set list listchars=tab:\ \ ,trail:·
-"
-"set nowrap       "Don't wrap lines
-"set linebreak    "Wrap lines at convenient points
-"
-"
+
+set autoindent
+set smartindent
+set smarttab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set expandtab
+
+filetype plugin on
+filetype indent on
+
+" Display tabs and trailing spaces visually
+"set list listchars=tab:\ \ ,trail:·
+
+set nowrap       "Don't wrap lines
+set linebreak    "Wrap lines at convenient points
+
+
 "" ================ Searching Settings ===============
 "
-"set incsearch       " Find the next match as we type the search
-""set showmatch       " show matching brace
-"set hlsearch        " highlight the results
-""set smartcase       " case insensitive search
-"set ignorecase
+set incsearch       " Find the next match as we type the search
+"set showmatch       " show matching brace
+set hlsearch        " highlight the results
+"set smartcase       " case insensitive search
+set ignorecase
 "
 "
 "" ================ Turn Off Swap Files ==============
-"
-"set noswapfile
-"set nobackup
-"set nowb
+
+set noswapfile
+set nobackup
+set nowb
 
 
 " ================ Color Scheme Settings  ===========
@@ -326,3 +326,7 @@ EOF
 " :%!python -m json.tool
 
 " ================ 
+
+filetype plugin indent on
+syntax on
+au BufRead,BufNewFile *.mlsp set filetype=mlsp
